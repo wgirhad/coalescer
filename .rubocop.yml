@@ -1,0 +1,10 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - '.git/**/*'
+  TargetRubyVersion: 2.7
+  SuggestExtensions: false
+
+Style/Documentation:
+  Enabled: false
