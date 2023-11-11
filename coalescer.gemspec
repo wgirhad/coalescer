@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$LOAD_PATH.push(File.expand_path('lib', __dir__))
+
 require 'coalescer'
 
 Gem::Specification.new do |s|
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.description = 'Enables coalesce chaining values'
   s.authors     = ['Willian Girhad']
   s.email       = 'willianmonts@gmail.com'
-  s.files       = ['lib/coalescer.rb']
+  s.files       = Dir['lib/**/*', 'LICENSE', 'README.md']
   s.homepage    = 'https://github.com/wgirhad/coalescer'
   s.license     = 'MIT'
   s.required_ruby_version = '>= 2.7'
